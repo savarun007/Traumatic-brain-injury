@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TBiDx - Chatbot</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <div id="background-animation-container">
+      <img
+        src="../frontend/static/images/img2.png"
+        alt="Floating Epidural Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img24.png"
+        alt="Floating Subdural Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img26.png"
+        alt="Floating Subarachnoid Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img3.png"
+        alt="Floating IPH Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img43.png"
+        alt="Floating IVH Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img86.png"
+        alt="Floating Any Icon"
+        class="floating-img"
+      />
+    </div>
+
+    <div class="cursor-light"></div>
+
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">TBiDx</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="chatbot.html" class="nav-link">Chatbot</a>
+          </li>
+          <li class="nav-item">
+            <a href="prediction.html" class="nav-link">Prediction</a>
+          </li>
+          <li class="nav-item">
+            <a href="comparison.html" class="nav-link">Model Comparison</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="theme-toggle-btn">
+              <svg
+                class="sun-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg
+                class="moon-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                ></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="chatbot-main">
+      <div class="chat-container">
+        <div class="chat-header">
+          <h1>TBiDx Assistant</h1>
+          <p>Your guide to understanding Traumatic Brain Injuries.</p>
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="suggestion-cards" id="suggestion-cards"></div>
+      </div>
+
+      <div class="chat-input-area">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask about a TBI type..."
+          autocomplete="off"
+        />
+        <button id="send-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </main>
+    <div class="custom-scrollbar-track">
+      <div class="custom-scrollbar-thumb"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="static/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TBiDx - Get Prediction</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <!-- Background Animation Container -->
+    <div id="background-animation-container">
+      <img
+        src="../frontend/static/images/img2.png"
+        alt="Floating Epidural Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img24.png"
+        alt="Floating Subdural Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img26.png"
+        alt="Floating Subarachnoid Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img3.png"
+        alt="Floating IPH Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img43.png"
+        alt="Floating IVH Icon"
+        class="floating-img"
+      />
+      <img
+        src="../frontend/static/images/img86.png"
+        alt="Floating Any Icon"
+        class="floating-img"
+      />
+    </div>
+
+    <div class="cursor-light"></div>
+
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">TBiDx</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="chatbot.html" class="nav-link">Chatbot</a>
+          </li>
+          <li class="nav-item">
+            <a href="prediction.html" class="nav-link">Prediction</a>
+          </li>
+          <li class="nav-item">
+            <a href="comparison.html" class="nav-link">Model Comparison</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="theme-toggle-btn">
+              <svg
+                class="sun-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg
+                class="moon-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                ></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="prediction-container">
+        <div class="upload-box" id="upload-box">
+          <input
+            type="file"
+            id="image-upload"
+            accept="image/png, image/jpeg"
+            hidden
+          />
+          <label for="image-upload" class="upload-label">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <span>Click to upload or drag & drop a CT Scan</span>
+          </label>
+        </div>
+        <div
+          id="image-preview-container"
+          class="image-preview-container"
+          style="display: none"
+        >
+          <img id="image-preview" src="#" alt="Image Preview" />
+        </div>
+        <div id="loader" class="loader" style="display: none"></div>
+        <div id="results-container" class="results-container">
+          <!-- Prediction cards will be inserted here -->
+        </div>
+        <div id="summary-container" class="summary-container">
+          <!-- AI summary button and content will be inserted here -->
+        </div>
+      </div>
+    </main>
+    <div class="custom-scrollbar-track">
+      <div class="custom-scrollbar-thumb"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
